@@ -25,5 +25,5 @@ jobs:
       - name: Build Project Dependencies
         run: nimble build -d:release -Y
 
-      - name: Run Search
-        run: nim r tools/cli_search.nim "${{ github.event.inputs.search_term }}"
+                - name: Run Search
+                  run: nim r --path:src tools/cli_search.nim "${{ github.event.inputs.search_term }}"

@@ -1,0 +1,7 @@
+Run nim r tools/cli_search.nim "gemini rag"
+Hint: used config file '/home/runner/work/nitter_cli/nitter_cli/.nim_runtime/config/nim.cfg' [Conf]
+Hint: used config file '/home/runner/work/nitter_cli/nitter_cli/.nim_runtime/config/config.nims' [Conf]
+Hint: used config file '/home/runner/work/nitter_cli/nitter_cli/config.nims' [Conf]
+........................................................................................................................................
+/home/runner/work/nitter_cli/nitter_cli/tools/cli_search.nim(22, 8) Error: cannot open file: api
+Error: Process completed with exit code 1.
