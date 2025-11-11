@@ -1,0 +1,29 @@
+name: Manual Search
+
+on:
+  workflow_dispatch:
+    inputs:
+      search_term:
+        description: 'Search Term'
+        required: true
+        type: string
+
+jobs:
+  run-search:
+    name: Run CLI Search
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Nim
+        uses: jiro4989/setup-nim-action@v2
+        with:
+          nim-version: 'stable'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build Project Dependencies
+        run: nimble build -d:release -Y
+
+      - name: Run Search
+        run: nim r tools/cli_search.nim "${{ github.event.inputs.search_term }}"
