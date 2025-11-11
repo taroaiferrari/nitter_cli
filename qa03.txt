@@ -1,0 +1,18 @@
+Run nim r --path:src tools/cli_search.nim "gemini rag"
+  nim r --path:src tools/cli_search.nim "gemini rag"
+  shell: /usr/bin/bash -e {0}
+Hint: used config file '/home/runner/work/nitter_cli/nitter_cli/.nim_runtime/config/nim.cfg' [Conf]
+Hint: used config file '/home/runner/work/nitter_cli/nitter_cli/.nim_runtime/config/config.nims' [Conf]
+Hint: used config file '/home/runner/work/nitter_cli/nitter_cli/config.nims' [Conf]
+.....................................................................................................................................................................
+/home/runner/work/nitter_cli/nitter_cli/src/formatters.nim(2, 58) Warning: use `nimble install htmlparser` and import `pkg/htmlparser` instead; htmlparser is deprecated [Deprecated]
+............................................
+/home/runner/work/nitter_cli/nitter_cli/src/auth.nim(2, 49) Warning: imported and not used: 'sequtils' [UnusedImport]
+..
+/home/runner/work/nitter_cli/nitter_cli/src/http_pool.nim(17, 13) Warning: Provide auth in url instead; newProxy is deprecated [Deprecated]
+...............
+/home/runner/work/nitter_cli/nitter_cli/tools/cli_search.nim(24, 17) template/generic instantiation of `async` from here
+/home/runner/work/nitter_cli/nitter_cli/tools/cli_search.nim(33, 3) Error: undeclared identifier: 'initHttpPool'
+candidates (edit distance, scope distance); see '--spellSuggest': 
+ (4, 5): 'http_pool'
+Error: Process completed with exit code 1.

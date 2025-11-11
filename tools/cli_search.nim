@@ -29,9 +29,6 @@ proc search() {.async.} =
   let searchTerm = commandLineParams().join(" ")
   echo &"Searching for: {searchTerm}"
 
-  # Initialize the HTTP client pool, required for API calls
-  initHttpPool()
-
   # Create a query object
   let query = Query(kind: tweets, text: searchTerm)
 
@@ -50,8 +47,5 @@ proc search() {.async.} =
       echo "No results found."
   except Exception as e:
     echo &"An error occurred: {e.name} - {e.msg}"
-  finally:
-    # Close the HTTP client pool
-    closeHttpPool()
 
 waitFor search()
